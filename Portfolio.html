@@ -1,0 +1,730 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("Nv_xbLQRWKWi5Xef4");
+})();
+</script>
+
+<title>Akash M S | Data Analyst</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+/* THEME VARIABLES */
+
+:root{
+--bg:#0f172a;
+--card:#1e293b;
+--text:#ffffff;
+--accent:#38bdf8;
+--nav:#00000080;
+}
+
+/* LIGHT MODE */
+
+body.light{
+--bg:#f4f7fb;
+--card:#ffffff;
+--text:#111;
+--accent:#2563eb;
+--nav:#ffffffdd;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:var(--nav);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:var(--text);
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--accent);
+}
+
+.toggle{
+background:var(--accent);
+color:black;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+/* SECTIONS */
+
+section{
+min-height:100vh;
+padding:100px 10%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+h2{
+margin-bottom:20px;
+font-size:32px;
+color:var(--accent);
+}
+
+/* HERO */
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns: 1fr 1fr;
+align-items:center;
+gap:80px;
+}
+
+/* IMAGE LEFT */
+
+.hero-image{
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:340px;
+height:340px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid var(--accent);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.6s ease;
+}
+
+/* TEXT RIGHT CENTER */
+
+.hero-text{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero-text h2{
+margin-bottom:10px;
+}
+
+/* FADE ON SCROLL */
+
+.hero-image img.fade{
+opacity:0;
+transform:translateY(-60px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-text{
+align-items:center;
+}
+
+.hero-image img{
+width:220px;
+height:220px;
+}
+
+}
+
+/* SKILLS */
+
+
+.skills-tail{
+position:relative;
+margin-top:60px;
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+/* center vertical line */
+
+.skills-tail::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:4px;
+height:100%;
+background:var(--accent);
+transform:translateX(-50%);
+opacity:0.4;
+}
+
+/* SKILLS GRID */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin:40px auto;
+max-width:900px;
+width:100%;
+}
+
+/* SKILL CARD */
+
+.skill-card{
+background:var(--card);
+padding:28px;
+border-radius:14px;
+text-align:center;
+transition:0.3s;
+}
+
+.skill-card i{
+font-size:32px;
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.skill-card h3{
+font-size:18px;
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* EXTRA SKILLS SECTION */
+
+.extra-skills{
+margin-top:60px;
+text-align:center;
+}
+
+.extra-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin:40px auto;
+max-width:700px;
+width:100%;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+.skills{
+grid-template-columns:1fr 1fr;
+}
+
+.extra-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.skills{
+grid-template-columns:1fr;
+}
+
+.extra-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* PROJECT GRID */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:30px;
+}
+
+.project-card{
+background:var(--card);
+aspect-ratio:1/1;
+padding:20px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+}
+
+.project-card a{
+margin-top:10px;
+color:var(--accent);
+text-decoration:none;
+}
+
+/* CONTACT */
+
+.contact{
+align-items:center;
+text-align:center;
+}
+
+.contact form{
+width:100%;
+max-width:450px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+background:var(--card);
+color:var(--text);
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:6px;
+background:var(--accent);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+background:var(--card);
+}
+
+.social{
+margin-top:10px;
+}
+
+.social a{
+margin:0 10px;
+font-size:22px;
+color:var(--accent);
+transition:0.3s;
+}
+
+.social a:hover{
+transform:scale(1.2);
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE GRID */
+
+@media(max-width:900px){
+
+.projects-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h3>AKASH</h3>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="toggle" onclick="toggleTheme()">Mode</div>
+
+</nav>
+
+
+<section id="home" class="hero">
+
+<div class="hero-image">
+<img src="https://i.ibb.co/8gw7hP55/Whats-App-Image-2026-01-25-at-7-11-59-PM.jpg" alt="Akash">
+</div>
+
+<div class="hero-text">
+
+<h1>AKASH M S</h1>
+
+<h2 class="typing"></h2>
+
+<p>Data to insight. Insight to action.</p>
+
+</div>
+
+</section>
+
+
+<section id="about" class="reveal">
+
+<h2>About Me</h2>
+
+<p>
+
+I am Akash M. S., a BSc Information Technology graduate with a focus on data analysis. I work with data to find patterns, measure performance, and support better decisions.
+
+My work involves tools such as Excel, Power BI, Tableau, and Python. I clean data, explore trends, build dashboards, and turn raw information into clear insights.
+
+I enjoy solving problems related to data quality, reporting, and business performance. I focus on practical analysis that helps teams understand what is happening in their data and what actions to take next.
+
+</p>
+
+</section>
+
+<section id="skills" class="reveal">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill-card">
+<i class="fas fa-file-excel"></i>
+<h3>Excel</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-chart-line"></i>
+<h3>Statistics</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-database"></i>
+<h3>SQL</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-chart-pie"></i>
+<h3>Power BI</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-chart-area"></i>
+<h3>Tableau</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-python"></i>
+<h3>Python</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-brain"></i>
+<h3>Machine Learning</h3>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-cloud"></i>
+<h3>Cloud Pipelines</h3>
+</div>
+
+</div>
+
+
+<div class="extra-skills">
+
+<h2>Additional Tech</h2>
+
+<div class="extra-grid">
+
+<div class="skill-card">
+<i class="fab fa-html5"></i>
+<h3>HTML</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS</h3>
+</div>
+
+<div class="skill-card">
+<i class="fab fa-js"></i>
+<h3>JavaScript</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="reveal">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<h3>Super Store Sales Analysis Dashboard</h3>
+
+<p>Excel dashboard for analyzing sales metrics.</p>
+
+<a href="https://github.com/Akash-ms04">View Project</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>Nike Retail Sales Analysis</h3>
+
+<p>Retail sales trend and product performance analysis.</p>
+
+<a href="https://github.com/Akash-ms04">View Project</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>Upcoming Project</h3>
+
+<p>A new upcoming project, comming soon.</p>
+
+<a href="https://github.com/Akash-ms04">View Project</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact reveal">
+
+<h2>Contact Me</h2>
+
+<form id="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Akash M S</p>
+
+<div class="social">
+
+<a href="https://github.com/Akash-ms04"><i class="fab fa-github"></i></a>
+
+<a href="https://www.linkedin.com/in/akash-m-subramanian-2b552634b/"><i class="fab fa-linkedin"></i></a>
+
+<a href="https://www.instagram.com/akash_m_subramanian"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* typing effect */
+
+const text="Data Analyst";
+let i=0;
+
+function typing(){
+if(i<text.length){
+document.querySelector(".typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,100);
+}
+}
+typing();
+
+/* scroll reveal */
+
+function reveal(){
+
+let reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+let elementTop=reveals[i].getBoundingClientRect().top;
+let visible=150;
+
+if(elementTop<windowHeight-visible){
+reveals[i].classList.add("active");
+}
+
+}
+}
+
+window.addEventListener("scroll",reveal);
+
+/* theme */
+
+function toggleTheme(){
+
+document.body.classList.toggle("light");
+
+localStorage.setItem(
+"theme",
+document.body.classList.contains("light") ? "light" : "dark"
+);
+}
+
+if(localStorage.getItem("theme")==="light"){
+document.body.classList.add("light");
+}
+
+/* contact */
+
+function sendMail(e){
+e.preventDefault();
+alert("Email sending can be connected using EmailJS.");
+}
+
+/* hero fade */
+
+const heroImage = document.querySelector(".hero-image img");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 120){
+heroImage.classList.add("fade");
+}else{
+heroImage.classList.remove("fade");
+}
+
+});
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_jdi4lzg",
+"template_fcuxany",
+this
+).then(function(){
+
+alert("Message sent successfully!");
+
+}, function(error){
+
+alert("Failed to send message");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+```
